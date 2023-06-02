@@ -5,14 +5,14 @@ namespace UsuariosApi.Data.Dtos
     public class CreateUsuarioDto
     {
         [Required]
-        public string NomeDeUsuario { get; set; }
+        public string UserName { get; set; }
         [Required]
         public DateTime DataNascimento { get; set; }
         [Required]
         [DataType(DataType.Password)]
-        public string Senha { get; set; }
+        public string Password { get; set; }
         [Required]
-        [Compare("Senha")]
-        public string ConfirmacaoDeSenha { get; set; }
+        [Compare("Password")]
+        public string ConfirmPassword { get; set; }
     }
 }

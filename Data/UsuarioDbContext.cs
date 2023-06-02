@@ -7,5 +7,7 @@ namespace UsuariosApi.Data
     public class UsuarioDbContext : IdentityDbContext<Usuario>
     {
         public UsuarioDbContext(DbContextOptions<UsuarioDbContext> opts) : base(opts) { }
+
+        public DbSet<Usuario> Usuarios { get; set; }
     }
 }
