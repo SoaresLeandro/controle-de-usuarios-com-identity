@@ -80,3 +80,8 @@ C:\Users\3973\Documents\ws-2023\Alura\API\UsuariosApi\obj\Debug\net6.0\UsuariosA
 C:\Users\3973\Documents\ws-2023\Alura\API\UsuariosApi\obj\Debug\net6.0\ref\UsuariosApi.dll
 C:\Users\3973\Documents\ws-2023\Alura\API\UsuariosApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\3973\Documents\ws-2023\Alura\API\UsuariosApi\bin\Debug\net6.0\appsettings.Development-old.json
+C:\Users\3973\Documents\ws-2023\Alura\API\UsuariosApi\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\3973\Documents\ws-2023\Alura\API\UsuariosApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\3973\Documents\ws-2023\Alura\API\UsuariosApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\3973\Documents\ws-2023\Alura\API\UsuariosApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\3973\Documents\ws-2023\Alura\API\UsuariosApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
