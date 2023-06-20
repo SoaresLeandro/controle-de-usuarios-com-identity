@@ -8,7 +8,9 @@ namespace UsuariosApi.Services
 {
     public class TokenService
     {
-        public TokenService() { }
+        private IConfiguration _configuration;
+
+        public TokenService(IConfiguration configuration) => _configuration = configuration;
 
         public string GenerateToken(Usuario usuario)
         {
@@ -19,7 +21,7 @@ namespace UsuariosApi.Services
                 new Claim(ClaimTypes.DateOfBirth, usuario.DataNascimento.ToString())
             };
 
-            var keys = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ApiIdentityLeandroApiIdentityLeandro"));
+            var keys = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["SymmetricSecurityKey"]));
             var signingCredentials = new SigningCredentials(keys, SecurityAlgorithms.HmacSha256);
             var token = new JwtSecurityToken
             (

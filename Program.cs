@@ -27,7 +27,7 @@ builder.Services.AddAuthentication(options =>
     options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
     {
         ValidateIssuerSigningKey = true,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ApiIdentityLeandroApiIdentityLeandro")),
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["SymmetricSecurityKey"])),
         ValidateAudience = false,
         ValidateIssuer = false,
         ClockSkew = TimeSpan.Zero
@@ -45,8 +45,8 @@ builder.Services.AddScoped<TokenService>();
 
 builder.Services.AddDbContext<UsuarioDbContext>(opts => 
 {
-    opts.UseMySql(builder.Configuration.GetConnectionString("UsuarioConnection"), 
-    ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("UsuarioConnection")));
+    opts.UseMySql(builder.Configuration["ConnectionStrings:UsuarioConnection"], 
+    ServerVersion.AutoDetect(builder.Configuration["ConnectionStrings:UsuarioConnection"]));
 });
 
 builder.Services
